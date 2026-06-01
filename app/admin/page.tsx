@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { Package, Truck, Clock, CheckCircle, FileText } from "lucide-react";
 import { prisma } from "@/lib/prisma";
 import QuoteActions from "./QuoteActions";

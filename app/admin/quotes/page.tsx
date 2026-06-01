@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { prisma } from "@/lib/prisma";
 import { PenTool, Mail, Calendar, Package, Wand2, Hash, MapPin, Phone } from "lucide-react";
 import QuoteActions from "../QuoteActions";
