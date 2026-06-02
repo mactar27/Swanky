@@ -4,6 +4,7 @@ import { prisma } from "@/lib/prisma";
 import CatalogueClient from "./CatalogueClient";
 import ScrollReveal from "@/components/ScrollReveal";
 
+export const dynamic = "force-dynamic";
 export default async function CataloguePage() {
   const products = await prisma.product.findMany({
     include: { tieredPrices: { orderBy: { minQty: "asc" } } },
