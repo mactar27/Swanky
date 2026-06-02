@@ -1,6 +1,6 @@
 export const dynamic = "force-dynamic";
 import { prisma } from "@/lib/prisma";
-import { PenTool, Mail, Calendar, Package, Wand2, Hash, MapPin, Phone } from "lucide-react";
+import { PenTool, Mail, Calendar, Package, Wand2, Hash, MapPin, Phone, Download } from "lucide-react";
 import QuoteActions from "../QuoteActions";
 
 export default async function AdminQuotesPage() {
@@ -125,12 +125,28 @@ export default async function AdminQuotesPage() {
                   </div>
 
                   {quote.logoUrl && (
-                    <div className="flex items-start gap-3 w-full">
-                      <Hash className="h-4 w-4 text-neutral-400 mt-0.5" />
-                      <div>
-                        <p className="text-xs text-neutral-500 uppercase font-semibold mb-0.5">Logo / File</p>
-                        <p className="text-sm font-medium text-blue-600 break-all">{quote.logoUrl}</p>
+                    <div className="w-full mt-4 bg-neutral-50 rounded-lg p-4 border border-neutral-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                      <div className="flex items-center gap-3">
+                        <div className="bg-blue-100 text-blue-600 p-2 rounded-md">
+                          <Hash className="h-5 w-5" />
+                        </div>
+                        <div>
+                          <p className="text-xs text-neutral-500 uppercase font-bold mb-0.5">Technical File</p>
+                          <p className="text-sm font-medium text-black truncate max-w-[200px]" title={quote.logoUrl}>
+                            Attached Logo / Design
+                          </p>
+                        </div>
                       </div>
+                      <a
+                        href={quote.logoUrl.startsWith('http') ? quote.logoUrl : `/${quote.logoUrl}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="bg-black text-white px-4 py-2 rounded-md text-sm font-bold shadow hover:bg-neutral-800 transition-colors flex items-center justify-center gap-2 whitespace-nowrap"
+                        download
+                      >
+                        <Download className="h-4 w-4" />
+                        Download File
+                      </a>
                     </div>
                   )}
                 </div>

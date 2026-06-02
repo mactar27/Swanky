@@ -38,6 +38,16 @@ export default async function AdminDashboardPage() {
 
   return (
     <div className="space-y-8">
+      {/* Export Pricing Alert */}
+      <div className="bg-blue-50 border border-blue-200 text-blue-800 px-6 py-4 rounded-xl flex items-start gap-4">
+        <FileText className="h-6 w-6 text-blue-600 mt-0.5 flex-shrink-0" />
+        <div>
+          <h4 className="font-bold">International Export Pricing</h4>
+          <p className="text-sm mt-1">
+            Prices are displayed in <strong>Euros (€)</strong> for international B2B clients (Europe, US, etc.). You can adjust these prices to Dollars ($) or other currencies in the <strong>Settings</strong> tab depending on your current export strategy. Egyptian Pounds (EGP) are generally not used for international B2B quotes.
+          </p>
+        </div>
+      </div>
       {/* KPI Cards */}
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         <div className="rounded-xl border border-neutral-200 bg-white p-6">
