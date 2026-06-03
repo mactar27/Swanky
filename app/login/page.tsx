@@ -42,7 +42,7 @@ export default function LoginPage() {
         <div className="bg-white border border-neutral-200 rounded-2xl p-8 shadow-sm">
           <div className="text-center mb-8">
             <Link href="/" className="inline-block mb-6">
-              <img src="/images.png" alt="Swanky Factory" className="h-10 object-contain" />
+              <img src="/swanky-logo.png" alt="Swanky Factory" className="h-10 object-contain" />
             </Link>
             <h1 className="text-2xl font-bold tracking-tight">Admin Dashboard</h1>
             <p className="text-neutral-500 text-sm mt-2">Protected industrial area. Authorized personnel only.</p>

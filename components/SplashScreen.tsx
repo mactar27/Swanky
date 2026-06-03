@@ -44,7 +44,7 @@ export function SplashScreen() {
     >
       <div className="w-48 md:w-64 animate-pulse">
         <img
-          src="/images.png"
+          src="/swanky-logo.png"
           alt="Swanky Factory"
           className="w-full h-auto object-contain invert drop-shadow-2xl"
         />

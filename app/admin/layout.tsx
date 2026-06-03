@@ -11,7 +11,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       {/* Main Content */}
       <main className="flex-1 flex flex-col">
         <header className="h-[calc(5rem+env(safe-area-inset-top))] pt-[env(safe-area-inset-top)] bg-white border-b border-border flex items-center px-6 md:px-8 gap-4">
-          <img src="/images.png" alt="Swanky Logo" className="h-8 md:hidden object-contain" />
+          <img src="/swanky-logo.png" alt="Swanky Logo" className="h-8 md:hidden object-contain" />
           <h1 className="text-xl font-bold">Factory Administration</h1>
         </header>
         <div className="p-8 pb-24 md:pb-8 flex-1 overflow-auto">

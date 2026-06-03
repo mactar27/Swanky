@@ -35,7 +35,7 @@ export default function Home() {
             {/* Logo */}
             <div className="animate-hero-logo mb-10 w-[260px] md:w-[400px] lg:w-[480px]">
               <img 
-                src="/images.png" 
+                src="/swanky-logo.png" 
                 alt="Swanky Factory Logo" 
                 className="w-full h-auto object-contain invert drop-shadow-2xl"
               />

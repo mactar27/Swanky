@@ -14,7 +14,7 @@ export function Footer() {
         {/* Top Section: Logo & Tagline */}
         <div className="mb-12">
           <Link href="/" className="inline-block mb-4">
-            <img src="/images.png" alt="Swanky Factory" className="h-10 object-contain" />
+            <img src="/swanky-logo.png" alt="Swanky Factory" className="h-10 object-contain" />
           </Link>
           <p className="text-sm text-neutral-500 max-w-sm">
             {t.footer.tagline}

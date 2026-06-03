@@ -19,7 +19,7 @@ export default function AdminSidebar() {
     <aside className="w-64 bg-white border-r border-border hidden md:flex flex-col">
       <div className="h-20 flex items-center px-6 border-b border-border">
         <Link href="/" className="font-bold text-lg flex items-center gap-2">
-          <img src="/images.png" alt="Swanky Factory" className="h-8 object-contain" />
+          <img src="/swanky-logo.png" alt="Swanky Factory" className="h-8 object-contain" />
         </Link>
       </div>
       <nav className="flex-1 px-4 py-6 space-y-2">
