@@ -24,6 +24,7 @@ export const metadata: Metadata = {
 }
 
 import { SplashScreen } from '@/components/SplashScreen'
+import { LanguageProvider } from '@/components/LanguageProvider'
 
 export default function RootLayout({
   children,
@@ -34,7 +35,9 @@ export default function RootLayout({
     <html lang="en">
       <body className="font-sans antialiased">
         <SplashScreen />
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

@@ -82,7 +82,7 @@ function ProductCard({ product }: { product: Product }) {
                   }`}
                 >
                   <span>From {tier.minQty} pcs</span>
-                  <span className="font-semibold">{tier.price.toFixed(2)} € / u</span>
+                  <span className="font-semibold">{tier.price.toFixed(2)} FCFA / u</span>
                 </div>
               ))}
             </div>
@@ -120,11 +120,11 @@ function ProductCard({ product }: { product: Product }) {
           <div className="flex items-end justify-between mb-4">
             <div>
               <p className="text-xs text-neutral-400 uppercase tracking-wide">Unit price</p>
-              <p className="text-2xl font-extrabold text-black">{unitPrice.toFixed(2)} €</p>
+              <p className="text-2xl font-extrabold text-black">{unitPrice.toFixed(2)} FCFA</p>
             </div>
             <div className="text-right">
               <p className="text-xs text-neutral-400 uppercase tracking-wide">Total</p>
-              <p className="text-xl font-bold text-black">{total.toFixed(2)} €</p>
+              <p className="text-xl font-bold text-black">{total.toFixed(2)} FCFA</p>
             </div>
           </div>
 
@@ -230,11 +230,11 @@ function OrderModal({
               </div>
               <div className="flex justify-between">
                 <span className="text-neutral-500">Unit price</span>
-                <span className="font-medium">{unitPrice.toFixed(2)} €</span>
+                <span className="font-medium">{unitPrice.toFixed(2)} FCFA</span>
               </div>
               <div className="flex justify-between border-t border-neutral-200 pt-2 mt-2">
                 <span className="font-bold">Total (excl. tax)</span>
-                <span className="font-black text-lg">{total.toFixed(2)} €</span>
+                <span className="font-black text-lg">{total.toFixed(2)} FCFA</span>
               </div>
             </div>
 
@@ -296,7 +296,7 @@ function OrderModal({
               </div>
               <div className="flex justify-between border-t pt-2 mt-2">
                 <span className="font-bold">Total</span>
-                <span className="font-black">{confirmation.total.toFixed(2)} €</span>
+                <span className="font-black">{confirmation.total.toFixed(2)} FCFA</span>
               </div>
             </div>
             <p className="text-sm text-neutral-600">

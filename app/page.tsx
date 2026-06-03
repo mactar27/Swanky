@@ -1,10 +1,15 @@
+'use client';
+
 import Link from "next/link";
 import { ArrowRight, Package, PenTool, TrendingDown, Star } from "lucide-react";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import { useLanguage } from "@/components/LanguageProvider";
 
 export default function Home() {
+  const { t } = useLanguage();
+
   return (
     <div className="flex min-h-screen flex-col bg-white">
       <Navbar />
@@ -38,16 +43,16 @@ export default function Home() {
 
             {/* Tagline */}
             <h1 className="animate-hero-tagline text-sm md:text-base uppercase tracking-[0.3em] text-neutral-300 max-w-2xl mb-12 drop-shadow-lg">
-              The premium manufacturer for your streetwear brand
+              {t.hero.tagline}
             </h1>
 
             {/* CTA buttons */}
             <div className="animate-hero-cta flex flex-col sm:flex-row gap-4">
               <Link href="/catalogue" className="px-8 py-3.5 bg-white text-black font-bold uppercase tracking-widest text-sm hover:bg-neutral-200 transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] hover:tracking-[0.15em]">
-                View Catalog
+                {t.hero.viewCatalog}
               </Link>
               <Link href="/devis" className="px-8 py-3.5 border border-white text-white font-bold uppercase tracking-widest text-sm hover:bg-white hover:text-black transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] hover:tracking-[0.15em] bg-black/20 backdrop-blur-sm">
-                Create a Quote
+                {t.hero.createQuote}
               </Link>
             </div>
 
@@ -64,10 +69,8 @@ export default function Home() {
                   <div className="p-4 bg-black text-white rounded-full">
                     <Package className="h-8 w-8" />
                   </div>
-                  <h3 className="text-xl font-bold">Premium Blanks</h3>
-                  <p className="text-neutral-600">
-                    Blank t-shirts, hoodies, and sweatpants designed with weights ranging from 200 to 500 GSM. Factory quality guaranteed.
-                  </p>
+                  <h3 className="text-xl font-bold">{t.features.blanks}</h3>
+                  <p className="text-neutral-600">{t.features.blanksDesc}</p>
                 </div>
               </ScrollReveal>
 
@@ -76,10 +79,8 @@ export default function Home() {
                   <div className="p-4 bg-black text-white rounded-full">
                     <PenTool className="h-8 w-8" />
                   </div>
-                  <h3 className="text-xl font-bold">Customization</h3>
-                  <p className="text-neutral-600">
-                    Screen printing, embroidery, custom labels. Import your logos and mockups, we handle the production.
-                  </p>
+                  <h3 className="text-xl font-bold">{t.features.customization}</h3>
+                  <p className="text-neutral-600">{t.features.customizationDesc}</p>
                 </div>
               </ScrollReveal>
 
@@ -88,10 +89,8 @@ export default function Home() {
                   <div className="p-4 bg-black text-white rounded-full">
                     <TrendingDown className="h-8 w-8" />
                   </div>
-                  <h3 className="text-xl font-bold">Tiered Pricing</h3>
-                  <p className="text-neutral-600">
-                    A tiered system designed for creators. The higher your order volume, the lower the unit price.
-                  </p>
+                  <h3 className="text-xl font-bold">{t.features.pricing}</h3>
+                  <p className="text-neutral-600">{t.features.pricingDesc}</p>
                 </div>
               </ScrollReveal>
 
@@ -105,23 +104,22 @@ export default function Home() {
             <ScrollReveal>
               <div className="flex justify-between items-end mb-10">
                 <div>
-                  <h2 className="text-3xl font-bold tracking-tight">Best Sellers</h2>
-                  <p className="text-neutral-500 mt-2">The essentials to start your collection.</p>
+                  <h2 className="text-3xl font-bold tracking-tight">{t.bestSellers.title}</h2>
+                  <p className="text-neutral-500 mt-2">{t.bestSellers.subtitle}</p>
                 </div>
                 <Link href="/catalogue" className="hidden md:flex items-center gap-2 text-sm font-medium hover:text-black/70">
-                  View all <ArrowRight className="h-4 w-4" />
+                  {t.bestSellers.viewAll} <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
             </ScrollReveal>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { name: "Heavyweight Hoodie 500 GSM", price: "From 18FCFA/u", img: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&q=80&w=600&h=800" },
-                { name: "Boxy T-Shirt 250 GSM", price: "From 8FCFA/u", img: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=600&h=800" },
-                { name: "Fleece Joggers 400 GSM", price: "From 15FCFA/u", img: "https://images.unsplash.com/photo-1489987707023-afc82478163a?auto=format&fit=crop&q=80&w=600&h=800" },
+                { name: "Heavyweight Hoodie 500 GSM", price: "From 18€/u", img: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&q=80&w=600&h=800" },
+                { name: "Boxy T-Shirt 250 GSM", price: "From 8€/u", img: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=600&h=800" },
+                { name: "Fleece Joggers 400 GSM", price: "From 15€/u", img: "https://images.unsplash.com/photo-1489987707023-afc82478163a?auto=format&fit=crop&q=80&w=600&h=800" },
               ].map((item, i) => (
                 <ScrollReveal key={i} delay={i * 120}>
-                  {/* 2. Premium hover — scale + border darkens */}
                   <div className="group relative rounded-xl border border-neutral-200 bg-white text-black overflow-hidden hover:border-black/50 hover:scale-[1.02] transition-all duration-300">
                     <div className="aspect-[3/4] w-full bg-neutral-100 relative overflow-hidden">
                       <img
@@ -132,7 +130,6 @@ export default function Home() {
                     </div>
                     <div className="p-5">
                       <h3 className="font-semibold text-lg">{item.name}</h3>
-                      {/* Price brightens on hover */}
                       <p className="text-neutral-400 group-hover:text-black text-sm mt-1 transition-colors duration-300">{item.price}</p>
                     </div>
                   </div>
@@ -146,7 +143,7 @@ export default function Home() {
         <section className="py-24 bg-neutral-50 text-black border-t border-neutral-200 text-center">
           <div className="container mx-auto px-4 md:px-6">
             <ScrollReveal>
-              <h2 className="text-3xl font-bold tracking-tight mb-12">Trusted by Swanky Factory Partners</h2>
+              <h2 className="text-3xl font-bold tracking-tight mb-12">{t.social.title}</h2>
             </ScrollReveal>
 
             <ScrollReveal delay={100}>
@@ -165,7 +162,7 @@ export default function Home() {
                   <div className="flex gap-1 mb-4 text-black">
                     {[...Array(5)].map((_, i) => <Star key={i} fill="currentColor" className="w-5 h-5" />)}
                   </div>
-                  <p className="text-neutral-700 italic mb-4">"Flawless quality on the 500 GSM hoodies. Our customers love the boxy fit and the embroidery is perfect."</p>
+                  <p className="text-neutral-700 italic mb-4">&quot;Flawless quality on the 500 GSM hoodies. Our customers love the boxy fit and the embroidery is perfect.&quot;</p>
                   <p className="font-medium text-black">— Aesthetix</p>
                 </div>
               </ScrollReveal>
@@ -175,7 +172,7 @@ export default function Home() {
                   <div className="flex gap-1 mb-4 text-black">
                     {[...Array(5)].map((_, i) => <Star key={i} fill="currentColor" className="w-5 h-5" />)}
                   </div>
-                  <p className="text-neutral-700 italic mb-4">"The tiered pricing system lets us maintain solid margins from the very first drop. Ultra-responsive on WhatsApp."</p>
+                  <p className="text-neutral-700 italic mb-4">&quot;The tiered pricing system lets us maintain solid margins from the very first drop. Ultra-responsive on WhatsApp.&quot;</p>
                   <p className="font-medium text-black">— VZNRY</p>
                 </div>
               </ScrollReveal>
@@ -185,7 +182,7 @@ export default function Home() {
                   <div className="flex gap-1 mb-4 text-black">
                     {[...Array(5)].map((_, i) => <Star key={i} fill="currentColor" className="w-5 h-5" />)}
                   </div>
-                  <p className="text-neutral-700 italic mb-4">"The 250 GSM tees have a perfectly heavy drape. The online quote process saves us so much time."</p>
+                  <p className="text-neutral-700 italic mb-4">&quot;The 250 GSM tees have a perfectly heavy drape. The online quote process saves us so much time.&quot;</p>
                   <p className="font-medium text-black">— Noir.</p>
                 </div>
               </ScrollReveal>

@@ -56,7 +56,7 @@ export default async function AdminOrdersPage() {
                     <OrderStatusSelect orderId={order.id} currentStatus={order.status} />
                   </td>
                   <td className="px-6 py-5 text-right font-bold text-black">
-                    {order.total.toFixed(2)} €
+                    {order.total.toFixed(2)} FCFA
                   </td>
                 </tr>
               ))}

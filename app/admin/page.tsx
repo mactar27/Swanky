@@ -44,7 +44,7 @@ export default async function AdminDashboardPage() {
         <div>
           <h4 className="font-bold">International Export Pricing</h4>
           <p className="text-sm mt-1">
-            Prices are displayed in <strong>Euros (€)</strong> for international B2B clients (Europe, US, etc.). You can adjust these prices to Dollars ($) or other currencies in the <strong>Settings</strong> tab depending on your current export strategy. Egyptian Pounds (EGP) are generally not used for international B2B quotes.
+            Prices are displayed in <strong>Euros (FCFA)</strong> for international B2B clients (Europe, US, etc.). You can adjust these prices to Dollars ($) or other currencies in the <strong>Settings</strong> tab depending on your current export strategy. Egyptian Pounds (EGP) are generally not used for international B2B quotes.
           </p>
         </div>
       </div>
@@ -130,7 +130,7 @@ export default async function AdminDashboardPage() {
                     </span>
                   </td>
                   <td className="px-6 py-4 text-right font-bold text-black">
-                    {order.total.toFixed(2)} €
+                    {order.total.toFixed(2)} FCFA
                   </td>
                 </tr>
               ))}
@@ -197,7 +197,7 @@ export default async function AdminDashboardPage() {
                 {product.tieredPrices.map((tier) => (
                   <div key={tier.id} className="flex justify-between text-sm px-4 py-2">
                     <span className="text-neutral-500">From {tier.minQty} pcs</span>
-                    <span className="font-bold">{tier.price.toFixed(2)} € / u</span>
+                    <span className="font-bold">{tier.price.toFixed(2)} FCFA / u</span>
                   </div>
                 ))}
               </div>
