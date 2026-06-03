@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Instagram, Phone } from "lucide-react";
+import { Instagram, Phone, Facebook } from "lucide-react";
 
 export function Footer() {
   return (
@@ -62,6 +62,9 @@ export function Footer() {
                   <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
                 </svg>
                 TikTok: @swankyfactory
+              </a>
+              <a href="https://www.facebook.com/people/Swanky-factory/61590274274346/" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-black transition-colors">
+                <Facebook className="h-4 w-4" /> Facebook: Swanky Factory
               </a>
             </nav>
           </div>
