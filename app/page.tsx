@@ -115,9 +115,9 @@ export default function Home() {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { name: "Heavyweight Hoodie 500 GSM", price: "From 18€/u", img: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&q=80&w=600&h=800" },
-                { name: "Boxy T-Shirt 250 GSM", price: "From 8€/u", img: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=600&h=800" },
-                { name: "Fleece Joggers 400 GSM", price: "From 15€/u", img: "https://images.unsplash.com/photo-1489987707023-afc82478163a?auto=format&fit=crop&q=80&w=600&h=800" },
+                { ...t.bestSellers.products[0], img: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&q=80&w=600&h=800" },
+                { ...t.bestSellers.products[1], img: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=600&h=800" },
+                { ...t.bestSellers.products[2], img: "https://images.unsplash.com/photo-1489987707023-afc82478163a?auto=format&fit=crop&q=80&w=600&h=800" },
               ].map((item, i) => (
                 <ScrollReveal key={i} delay={i * 120}>
                   <div className="group relative rounded-xl border border-neutral-200 bg-white text-black overflow-hidden hover:border-black/50 hover:scale-[1.02] transition-all duration-300">
@@ -156,38 +156,17 @@ export default function Home() {
             </ScrollReveal>
 
             <div className="grid gap-6 md:grid-cols-3 text-left">
-
-              <ScrollReveal delay={0}>
-                <div className="bg-white border border-neutral-200 p-6 rounded-xl shadow-sm h-full">
-                  <div className="flex gap-1 mb-4 text-black">
-                    {[...Array(5)].map((_, i) => <Star key={i} fill="currentColor" className="w-5 h-5" />)}
+              {t.social.reviews.map((review, i) => (
+                <ScrollReveal key={i} delay={i * 150}>
+                  <div className="bg-white border border-neutral-200 p-6 rounded-xl shadow-sm h-full">
+                    <div className="flex gap-1 mb-4 text-black">
+                      {[...Array(5)].map((_, j) => <Star key={j} fill="currentColor" className="w-5 h-5" />)}
+                    </div>
+                    <p className="text-neutral-700 italic mb-4">&quot;{review.quote}&quot;</p>
+                    <p className="font-medium text-black">— {review.author}</p>
                   </div>
-                  <p className="text-neutral-700 italic mb-4">&quot;Flawless quality on the 500 GSM hoodies. Our customers love the boxy fit and the embroidery is perfect.&quot;</p>
-                  <p className="font-medium text-black">— Aesthetix</p>
-                </div>
-              </ScrollReveal>
-
-              <ScrollReveal delay={150}>
-                <div className="bg-white border border-neutral-200 p-6 rounded-xl shadow-sm h-full">
-                  <div className="flex gap-1 mb-4 text-black">
-                    {[...Array(5)].map((_, i) => <Star key={i} fill="currentColor" className="w-5 h-5" />)}
-                  </div>
-                  <p className="text-neutral-700 italic mb-4">&quot;The tiered pricing system lets us maintain solid margins from the very first drop. Ultra-responsive on WhatsApp.&quot;</p>
-                  <p className="font-medium text-black">— VZNRY</p>
-                </div>
-              </ScrollReveal>
-
-              <ScrollReveal delay={300}>
-                <div className="bg-white border border-neutral-200 p-6 rounded-xl shadow-sm h-full">
-                  <div className="flex gap-1 mb-4 text-black">
-                    {[...Array(5)].map((_, i) => <Star key={i} fill="currentColor" className="w-5 h-5" />)}
-                  </div>
-                  <p className="text-neutral-700 italic mb-4">&quot;The 250 GSM tees have a perfectly heavy drape. The online quote process saves us so much time.&quot;</p>
-                  <p className="font-medium text-black">— Noir.</p>
-                </div>
-              </ScrollReveal>
-
-            </div>
+                </ScrollReveal>
+              ))}
           </div>
         </section>
 

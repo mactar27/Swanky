@@ -26,9 +26,19 @@ export const translations = {
       title: 'Best Sellers',
       subtitle: 'The essentials to start your collection.',
       viewAll: 'View all',
+      products: [
+        { name: 'Heavyweight Hoodie 500 GSM', price: 'From 18€/u' },
+        { name: 'Boxy T-Shirt 250 GSM', price: 'From 8€/u' },
+        { name: 'Fleece Joggers 400 GSM', price: 'From 15€/u' },
+      ],
     },
     social: {
       title: 'Trusted by Swanky Factory Partners',
+      reviews: [
+        { quote: 'Flawless quality on the 500 GSM hoodies. Our customers love the boxy fit and the embroidery is perfect.', author: 'Aesthetix' },
+        { quote: 'The tiered pricing system lets us maintain solid margins from the very first drop. Ultra-responsive on WhatsApp.', author: 'VZNRY' },
+        { quote: 'The 250 GSM tees have a perfectly heavy drape. The online quote process saves us so much time.', author: 'Noir.' },
+      ],
     },
     footer: {
       tagline: 'The premium manufacturer for your streetwear brand.',
@@ -60,6 +70,7 @@ export const translations = {
       phone: 'WhatsApp Number (with country code)',
     },
   },
+
   fr: {
     dir: 'ltr',
     nav: {
@@ -82,12 +93,22 @@ export const translations = {
       pricingDesc: "Un système de paliers pensé pour les créateurs. Plus le volume de commande augmente, plus le prix unitaire baisse.",
     },
     bestSellers: {
-      title: 'Best Sellers',
+      title: 'Meilleures Ventes',
       subtitle: 'Les incontournables pour démarrer votre collection.',
       viewAll: 'Voir tout',
+      products: [
+        { name: 'Hoodie Lourd 500 GSM', price: 'À partir de 18€/u' },
+        { name: 'T-Shirt Boxy 250 GSM', price: 'À partir de 8€/u' },
+        { name: 'Jogging Molleton 400 GSM', price: 'À partir de 15€/u' },
+      ],
     },
     social: {
       title: 'Ils font confiance à Swanky Factory',
+      reviews: [
+        { quote: 'Qualité irréprochable sur les hoodies 500 GSM. Nos clients adorent la coupe boxy et la broderie est parfaite.', author: 'Aesthetix' },
+        { quote: 'Le système de tarifs dégressifs nous permet de maintenir de bonnes marges dès le premier drop. Ultra-réactif sur WhatsApp.', author: 'VZNRY' },
+        { quote: 'Les t-shirts 250 GSM ont un tombé lourd parfait. Le processus de devis en ligne nous fait gagner un temps précieux.', author: 'Noir.' },
+      ],
     },
     footer: {
       tagline: 'Le fabricant premium pour votre marque de streetwear.',
@@ -110,7 +131,7 @@ export const translations = {
       technique: 'Technique de Personnalisation',
       quantity: 'Quantité Estimée',
       logo: 'Importez votre Logo (Optionnel)',
-      logoHint: 'SVG, AI, PNG (Max. 20MB). Vous pouvez aussi l\'envoyer via WhatsApp.',
+      logoHint: "SVG, AI, PNG (Max. 20MB). Vous pouvez aussi l'envoyer via WhatsApp.",
       notes: 'Notes supplémentaires (optionnel)',
       notesHint: 'Couleurs, emplacement du print, finitions spéciales...',
       submit: 'Envoyer la demande de devis',
@@ -119,6 +140,7 @@ export const translations = {
       phone: 'Numéro WhatsApp (avec indicatif pays)',
     },
   },
+
   es: {
     dir: 'ltr',
     nav: {
@@ -144,9 +166,19 @@ export const translations = {
       title: 'Más Vendidos',
       subtitle: 'Los imprescindibles para lanzar tu colección.',
       viewAll: 'Ver todo',
+      products: [
+        { name: 'Hoodie Pesado 500 GSM', price: 'Desde 18€/u' },
+        { name: 'Camiseta Boxy 250 GSM', price: 'Desde 8€/u' },
+        { name: 'Jogger de Forro Polar 400 GSM', price: 'Desde 15€/u' },
+      ],
     },
     social: {
       title: 'Marcas que confían en Swanky Factory',
+      reviews: [
+        { quote: 'Calidad impecable en los hoodies 500 GSM. Nuestros clientes adoran el corte boxy y el bordado es perfecto.', author: 'Aesthetix' },
+        { quote: 'El sistema de precios escalonados nos permite mantener buenos márgenes desde el primer drop. Atención al cliente increíble por WhatsApp.', author: 'VZNRY' },
+        { quote: 'Las camisetas 250 GSM tienen una caída perfectamente pesada. El proceso de presupuesto en línea nos ahorra muchísimo tiempo.', author: 'Noir.' },
+      ],
     },
     footer: {
       tagline: 'El fabricante premium para tu marca de streetwear.',
@@ -178,6 +210,7 @@ export const translations = {
       phone: 'Número de WhatsApp (con código de país)',
     },
   },
+
   ar: {
     dir: 'rtl',
     nav: {
@@ -203,9 +236,19 @@ export const translations = {
       title: 'الأكثر مبيعاً',
       subtitle: 'الأساسيات لإطلاق مجموعتك.',
       viewAll: 'عرض الكل',
+      products: [
+        { name: 'هودي ثقيل 500 GSM', price: 'ابتداءً من 18€/قطعة' },
+        { name: 'تيشيرت Boxy 250 GSM', price: 'ابتداءً من 8€/قطعة' },
+        { name: 'بنطلون رياضي 400 GSM', price: 'ابتداءً من 15€/قطعة' },
+      ],
     },
     social: {
       title: 'علامات تجارية تثق في Swanky Factory',
+      reviews: [
+        { quote: 'جودة لا تشوبها شائبة على الهوديز 500 GSM. عملاؤنا يعشقون القصة الواسعة والتطريز مثالي.', author: 'Aesthetix' },
+        { quote: 'نظام الأسعار التنازلية يتيح لنا الحفاظ على هوامش ربح جيدة منذ أول إطلاق. سرعة في الرد عبر WhatsApp لا تصدق.', author: 'VZNRY' },
+        { quote: 'التيشيرتات 250 GSM لها تدرج ثقيل ومثالي. عملية طلب الأسعار عبر الإنترنت توفر علينا الكثير من الوقت.', author: 'Noir.' },
+      ],
     },
     footer: {
       tagline: 'الشريك المتميز لصناعة ملابس الستريتوير.',
