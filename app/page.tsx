@@ -167,6 +167,7 @@ export default function Home() {
                   </div>
                 </ScrollReveal>
               ))}
+            </div>
           </div>
         </section>
 
