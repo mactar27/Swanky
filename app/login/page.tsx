@@ -76,9 +76,22 @@ export default function LoginPage() {
             </button>
           </form>
         </div>
-        <p className="text-center text-xs text-neutral-400 mt-6">
-          &copy; {new Date().getFullYear()} Swanky Factory. All rights reserved.
-        </p>
+        <div className="flex flex-col items-center gap-1 mt-6">
+          <p className="text-center text-xs text-neutral-400">
+            &copy; {new Date().getFullYear()} Swanky Factory. All rights reserved.
+          </p>
+          <p className="text-center text-xs text-neutral-400 flex items-center justify-center gap-1">
+            Developed by{" "}
+            <a
+              href="https://wockytech.xyz"
+              target="_blank"
+              rel="noreferrer"
+              className="font-semibold text-black hover:underline"
+            >
+              WockyTech
+            </a>
+          </p>
+        </div>
       </ScrollReveal>
     </div>
   );

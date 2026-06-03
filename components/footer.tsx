@@ -55,9 +55,20 @@ export function Footer() {
         </div>
 
         {/* Bottom Section: Copyright */}
-        <div className="border-t border-neutral-100 pt-8">
+        <div className="border-t border-neutral-100 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-neutral-400">
             &copy; {new Date().getFullYear()} Swanky Factory. All rights reserved.
+          </p>
+          <p className="text-xs text-neutral-400 flex items-center gap-1">
+            Developed by{" "}
+            <a
+              href="https://wockytech.xyz"
+              target="_blank"
+              rel="noreferrer"
+              className="font-semibold text-black hover:underline"
+            >
+              WockyTech
+            </a>
           </p>
         </div>
 
