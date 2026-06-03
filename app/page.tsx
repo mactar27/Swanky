@@ -16,7 +16,7 @@ export default function Home() {
           
           {/* 1. Background Video */}
           <video 
-            src="/swanky.mov" 
+            src="/swanky.mp4" 
             autoPlay 
             loop 
             muted 
