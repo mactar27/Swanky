@@ -12,36 +12,45 @@ export default function Home() {
       <main className="flex-1">
 
         {/* ── HERO ── */}
-        <section className="flex flex-col items-center justify-center min-h-[88vh] text-center px-4 bg-black text-white">
+        <section className="relative flex flex-col items-center justify-center min-h-[90vh] text-center px-4 overflow-hidden bg-black text-white">
+          
+          {/* 1. Background Video */}
+          <video 
+            src="/swanky.mov" 
+            autoPlay 
+            loop 
+            muted 
+            playsInline 
+            className="absolute inset-0 w-full h-full object-cover opacity-35 z-0"
+          />
 
-          {/* 1. Logo — fade-in-up, 0 delay */}
-          <div className="animate-hero-logo mb-10 w-[260px] md:w-[400px] lg:w-[480px]">
-            <img
-              src="/images.png"
-              alt="Swanky Factory"
-              className="w-full h-auto object-contain invert"
-            />
-          </div>
+          {/* 2. Foreground Content */}
+          <div className="relative z-10 flex flex-col items-center">
+            
+            {/* Logo */}
+            <div className="animate-hero-logo mb-10 w-[260px] md:w-[400px] lg:w-[480px]">
+              <img 
+                src="/images.png" 
+                alt="Swanky Factory Logo" 
+                className="w-full h-auto object-contain invert drop-shadow-2xl"
+              />
+            </div>
 
-          {/* 2. Tagline — fade-in-up, 200ms delay */}
-          <h1 className="animate-hero-tagline text-sm md:text-base uppercase tracking-[0.3em] text-neutral-400 max-w-2xl mb-12">
-            The premium manufacturer for your streetwear brand
-          </h1>
+            {/* Tagline */}
+            <h1 className="animate-hero-tagline text-sm md:text-base uppercase tracking-[0.3em] text-neutral-300 max-w-2xl mb-12 drop-shadow-lg">
+              The premium manufacturer for your streetwear brand
+            </h1>
 
-          {/* 3. CTA buttons — fade-in-up, 400ms delay + glow hover */}
-          <div className="animate-hero-cta flex flex-col sm:flex-row gap-4">
-            <Link
-              href="/catalogue"
-              className="btn-hero-white px-10 py-3.5 bg-white text-black font-bold uppercase tracking-widest text-sm hover:bg-neutral-200"
-            >
-              View Catalog
-            </Link>
-            <Link
-              href="/devis"
-              className="btn-hero-outline px-10 py-3.5 border border-white text-white font-bold uppercase tracking-widest text-sm hover:bg-white hover:text-black"
-            >
-              Create a Quote
-            </Link>
+            {/* CTA buttons */}
+            <div className="animate-hero-cta flex flex-col sm:flex-row gap-4">
+              <Link href="/catalogue" className="px-8 py-3.5 bg-white text-black font-bold uppercase tracking-widest text-sm hover:bg-neutral-200 transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,255,255,0.6)] hover:tracking-[0.15em]">
+                View Catalog
+              </Link>
+              <Link href="/devis" className="px-8 py-3.5 border border-white text-white font-bold uppercase tracking-widest text-sm hover:bg-white hover:text-black transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] hover:tracking-[0.15em] bg-black/20 backdrop-blur-sm">
+                Create a Quote
+              </Link>
+            </div>
+
           </div>
         </section>
 
@@ -107,9 +116,9 @@ export default function Home() {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { name: "Heavyweight Hoodie 500 GSM", price: "From 18€/u", img: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&q=80&w=600&h=800" },
-                { name: "Boxy T-Shirt 250 GSM", price: "From 8€/u", img: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=600&h=800" },
-                { name: "Fleece Joggers 400 GSM", price: "From 15€/u", img: "https://images.unsplash.com/photo-1489987707023-afc82478163a?auto=format&fit=crop&q=80&w=600&h=800" },
+                { name: "Heavyweight Hoodie 500 GSM", price: "From 18FCFA/u", img: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&q=80&w=600&h=800" },
+                { name: "Boxy T-Shirt 250 GSM", price: "From 8FCFA/u", img: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=600&h=800" },
+                { name: "Fleece Joggers 400 GSM", price: "From 15FCFA/u", img: "https://images.unsplash.com/photo-1489987707023-afc82478163a?auto=format&fit=crop&q=80&w=600&h=800" },
               ].map((item, i) => (
                 <ScrollReveal key={i} delay={i * 120}>
                   {/* 2. Premium hover — scale + border darkens */}
