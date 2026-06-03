@@ -49,6 +49,20 @@ export function Footer() {
               <a href="https://www.instagram.com/swankyfactory/" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-black transition-colors">
                 <Instagram className="h-4 w-4" /> Instagram: @swankyfactory
               </a>
+              <a href="https://www.tiktok.com/@swankyfactory" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-black transition-colors">
+                <svg
+                  className="h-4 w-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+                </svg>
+                TikTok: @swankyfactory
+              </a>
             </nav>
           </div>
 
